@@ -16,11 +16,13 @@ mongoose.connect(uri, {
     useUnifiedTopology: true,
 }).then(() => {
     console.log("MongoDB connected")
-     client.db("test").command({ ping: 1 });
+    client.db("test").command({ ping: 1 });
 })
     .catch((error) => console.error("MongoDB connection error:", error));
 
 // Define user schema and model
+
+
 const userSchema = new mongoose.Schema({
     email: String,
     password: String
